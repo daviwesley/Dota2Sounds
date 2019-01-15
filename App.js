@@ -23,6 +23,16 @@ const Feature = ({title, onPressPlay, onShare}) => (
 );
 
 export default class App extends Component {
+    static navigationOptions = {
+		  title: 'Login',
+		  headerStyle: {
+			  backgroundColor: '#273445'
+		  },
+		  headerTitleStyle: {
+        color: 'white',
+        textAlign: 'center'
+		  }
+	  };
     constructor(props) {
       super(props)
       Sound.setCategory('Playback', true); // true = mixWithOthers
@@ -80,7 +90,7 @@ export default class App extends Component {
               />
             );
           })}
-        <StatusBar color='#485a6c' barStyle='light-content'/>
+        <StatusBar backgroundColor='#273445' barStyle='light-content'/>
       </ScrollView>
     );
   }
